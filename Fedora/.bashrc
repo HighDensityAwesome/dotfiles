@@ -16,7 +16,14 @@ fi
 ##	ALIASES     ##
 ######################
 
+
+#LIST Aliases
 #alias ls='ls -GFh' #list with a little flair ;) 
+alias lsl='ls -lX' # list as list in filetype/extension order
+alias la='ls -aGlh' #list ALL with --no-group (in a long listing, don't print group names)
+			#as a list with --human-readable file sizes.
+			#and no, the dir sizes aren't broken, they're just
+			#nonrecursive. 
 
 #TMUX Aliases
 alias lts='tmux list-session ' #list all currently active tmux sessions
@@ -67,9 +74,9 @@ function cd() {
 }
 
 # update all important maintained config/info files
-update-configs() {
-cd /home/dan/Documents/installed/Fedora && git-update ./installed.txt 'weekly backup')
-}
+#update-configs() {
+#cd /home/dan/Documents/installed/Fedora && git-update ./installed.txt 'weekly backup')
+#}
 
 ##########################################
 ##	ENVIRONMENT VARIABLES/MISC	##
