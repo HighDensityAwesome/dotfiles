@@ -32,4 +32,8 @@ git commit -m "Commit message 'within a commit' message."	#Now the file is commi
 									#yet.
 git push origin master						#pushes all changed to master branch. can be changed to any
 
+# MISC GIT COMMANDS #
+git pull origin master			#fetches a copy of the master branch from the original repository, and merges it with 						#the current branch you have checked out.
+
+
 
