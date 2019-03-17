@@ -1,0 +1,19 @@
+##########################################################
+##	CURRENT HELPFUL LIST OF NON-VANILLA SETTINGS	##
+##			& CHANGES			##
+##########################################################
+
+---------------------------------------------------------------------------------------
+
+##################################
+##	Keyboard Shortcuts	##
+##################################
+
+Settings -> Devices -> Keyboard -> Navigation:
+	Move to workspace above:		Shft+Ctrl+Up
+	Move to workspace below:		Shft+Ctrl+Down
+	Move window one monitor to the left:	Shft+Ctrl+Super+Left
+	Move window one monitor to the right:	Shft+Ctrl+Super+Right
+	Move window one workspace to the down:	Shft+Ctrl+Super+Down
+	Move window one workspace to the up:	Shft+Ctrl+Super+Up
+	
