@@ -17,3 +17,19 @@ Settings -> Devices -> Keyboard -> Navigation:
 	Move window one workspace to the down:	Shft+Ctrl+Super+Down
 	Move window one workspace to the up:	Shft+Ctrl+Super+Up
 	
+
+###########################
+## Comitting Git Changes ##
+###########################
+	# Useful links for git usage #
+https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html
+http://rogerdudler.github.io/git-guide/
+
+# BASIC USAGE #
+git status							#checks status of current git repo
+git add <file>							#stages <file> for changes
+git commit -m "Commit message 'within a commit' message."	#Now the file is committed to the HEAD, but not the remote repo
+									#yet.
+git push origin master						#pushes all changed to master branch. can be changed to any
+
+
