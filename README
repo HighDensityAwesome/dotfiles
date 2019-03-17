@@ -1,3 +1,4 @@
+installed.txt
 .bash_profile
 .bashrc
 .tmux-conf
@@ -7,4 +8,6 @@
 
 
 # TO DO #
+MERGE 'installed' repo master with 'dotfiles' repo master
 Create .sh script that automatically runs every n-days to push any new local changes to respective files in repo.
+
