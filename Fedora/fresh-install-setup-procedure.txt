@@ -1,0 +1,124 @@
+
+##########################################
+##	Fresh Install Setup Process	##
+##########################################
+
+------------------------------------------
+
+########################
+# Preliminary Programs #
+########################
+
+	Firefox (pre-installed on Fedora)
+
+
+	GParted
+		sudo dnf install gparted
+	
+
+	Gnome-Tweak Changes
+		"Software" -> search -> install
+		
+
+	Virtual Box
+		website -> download -> install -> setup
+		
+		# SETUP #
+		
+		- make sure to install kernel-devel or won't work!
+			sudo dnf install kernel-devel
+        	- You will not be able to start VMs until this problem is fixed:
+		
+		"WARNING: The vboxdrv kernel module is not loaded. Either there is no module
+         	available for the current kernel (5.5.13-200.fc31.x86_64) or it failed to
+         	load. Please recompile the kernel module". Follow next steps to do so:
+		
+			# install dependencies #
+				sudo dnf install gcc make perl
+
+			# configure #
+				sudo /usr/lib/virtualbox/vboxdrv.sh
+
+           			sudo /sbin/vboxconfig
+
+		# VM install Procedure #
+			- Create new machine
+			- Named: Win 10 (VirtualBox should detect architecture and select it for you)
+			- Allow ~8-9GB of memory
+			- ~ 40GB Hard Disk space
+			- Custom Disk Install
+			- Obfuscate location by selecting US or UK
+			- US International Keyboard layout
+			- Security questions:
+				"What was your first pets name?"
+					First Pet
+				"What is the name of the city where you were born?"
+					City Born
+				"What was your childhood nickname?"
+					Childhood Nickname
+			- Once installed, install Guest Additions to VM
+				HOST: Devices -> Insert Guest Additions CD Image
+				VM: This PC -> CD Drive (D:) VirtualBox Guest Additions -> VBoxWindowsAdditions
+				follow rest install procedure
+
+		# VM Prelim Programs #
+			Firefox
+				+ Note: MAKE SURE TO INSTALL uBlock Origins			
+			Tor Browser
+			uTorrent
+				+ Note: CAREFUL ON INSTALL! They'll try to get you to install bs, you know the drill.
+
+		+ Note: default VM escape key: RIGHT CTRL
+
+
+	Hydrapaper wallpaper
+		+ Used to setup separate dual monitor wallpapers	
+	
+
+	Gimp
+		+ Photo editor
+
+####################
+# Preference Setup #
+####################
+
+	# Step 0 #
+		- Download customised dotfiles repo
+
+		sudo mkdir ~/code && cd ~/code
+		git clone https://github.com/HighDensityAwesome/dotfiles.git
+
+	
+	# Terminal Preferences #
+		
+		# Terminal Profile Saving and Loading #
+			source system:
+				$ dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf
+			destination system (after transferring the gnome-terminal-profiles.dconf file):
+				$ dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
+
+		# Install vim-enhanced #
+			sudo dnf install vim
+
+		# Install vundle #
+			git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+			
+			- Copy vim and vundle preferences from custom dotfiles:
+				cd ~ && sudo rm -rm .vim* && sudo cp -rf ~/code/dotfiles/Fedora/.vim* ~
+
+			- Launch vim and run:
+				:PluginInstall
+				or from the command line:
+				vim +PluginInstall +qall
+
+	
+	# Keyboard Shortcuts #
+		Settings -> Devices -> Keyboard -> Navigation:
+			Move to workspace above:		Shft+Ctrl+Up
+			Move to workspace below:		Shft+Ctrl+Down
+			Move window one monitor to the left:	Shft+Ctrl+Super+Left
+			Move window one monitor to the right:	Shft+Ctrl+Super+Right
+			Move window one workspace to the down:	Shft+Ctrl+Super+Down
+			Move window one workspace to the up:	Shft+Ctrl+Super+Up
+
+
